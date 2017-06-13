@@ -1,0 +1,4 @@
+ConsumerServiceWebService/bin/*
+ConsumerServiceWebService/obj/*
+DatabaseService.Models/bin/*
+DatabaseService.Models/obj/*
