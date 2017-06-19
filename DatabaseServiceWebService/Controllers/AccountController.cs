@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using DatabaseService.Queries.SQL;
+using DatabaseService.Models;
 
 namespace DatabaseServiceWebService.Controllers
 {
@@ -8,7 +9,9 @@ namespace DatabaseServiceWebService.Controllers
         [HttpPost]
         public dynamic Register([FromBody] dynamic inputs)
         {
-            return AccountDaoBase.RegisterUser(inputs);
+            RegisterSuccess r = new RegisterSuccess();
+                r=AccountDaoBase.RegisterUser(inputs);
+            return r;
         }
     }
 }

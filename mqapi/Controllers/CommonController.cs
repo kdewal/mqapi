@@ -7,6 +7,7 @@ using DatabaseService.SDK.Models.Request.User;
 
 namespace mqapi.Controllers
 {
+    [Authorize]
     public class CommonController : BaseController {
 
        // [HttpPost]
@@ -24,5 +25,11 @@ namespace mqapi.Controllers
         //        return BadRequest(response.ReasonPhrase);
         //    }
         //}
+        
+        [HttpGet]
+        public string hello()
+        {
+            return "hello";
+        }
     }
 }

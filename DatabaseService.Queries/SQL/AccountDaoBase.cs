@@ -5,6 +5,7 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using DatabaseService.Models;
 //using DMI.Models;
 
 namespace DatabaseService.Queries.SQL
@@ -21,7 +22,7 @@ namespace DatabaseService.Queries.SQL
                 SqlParameter[] pvoParams = new SqlParameter[2];
                 pvoParams[0] = new SqlParameter("@mobilenumber", SqlDbType.VarChar);
                 pvoParams[0].Value = mobilenumber;
-                SqlDataReader sdr = SqlHelper.ExecuteReader(connectionstring, CommandType.StoredProcedure, "usp_Athenticate", pvoParams);
+                SqlDataReader sdr = SqlHelper.ExecuteReader(connectionstring, CommandType.StoredProcedure, "usp_authenticate", pvoParams);
                 if (sdr.HasRows && sdr.Read())
                 {
                     DatabaseService.Models.AuthenticatedUser au = new Models.AuthenticatedUser();
@@ -41,7 +42,7 @@ namespace DatabaseService.Queries.SQL
             }
         }
 
-        public static int RegisterUser(dynamic inputs)
+        public static RegisterSuccess RegisterUser(dynamic inputs)
         {
             try
             {
@@ -83,9 +84,30 @@ namespace DatabaseService.Queries.SQL
 
                 pvoParams[11] = new SqlParameter("@Password", SqlDbType.VarChar);
                 pvoParams[11].Value = inputs.Password;
-                return SqlHelper.ExecuteNonQuery(connectionstring, CommandType.StoredProcedure, "usp_registerUser", pvoParams);
+                SqlDataReader dr= SqlHelper.ExecuteReader(connectionstring, CommandType.StoredProcedure, "usp_registerUser", pvoParams);
 
-
+                if (dr.HasRows && dr.Read())
+                {
+                    RegisterSuccess rs = new RegisterSuccess();
+                    rs.FirstName = dr["FirstName"].ToString();
+                    rs.LastName=dr["LastName"].ToString();
+                    rs.PanNumber=dr["PanNumber"].ToString();
+                    rs.Address1=dr["Address1"].ToString();
+                    rs.Address2=dr["Address2"].ToString();
+                    rs.City=dr["City"].ToString();
+                    rs.State=dr["State"].ToString();
+                    rs.PostalCode=Convert.ToInt32(dr["PostalCode"].ToString());
+                    rs.PrimaryPhone=dr["PrimaryPhone"].ToString();
+                    rs.SecondaryPhone=dr["SecondaryPhone"].ToString();
+                    rs.Email=dr["Email"].ToString();
+                    rs.AgreeToTerms=Convert.ToBoolean(dr["AgreeToTerms"].ToString());
+                    rs.DateAdded = Convert.ToDateTime(dr["DateAdded"].ToString());
+                    return rs;
+                }
+                else
+                {
+                    throw new InvalidOperationException("Internal Server error");
+                }
 
                 // var collection = _database.GetCollection<BsonDocument>("client");
                 //var filter = Builders<BsonDocument>.Filter.Eq("Id", ClientId);
@@ -97,7 +119,7 @@ namespace DatabaseService.Queries.SQL
             catch (Exception ex)
             {
                 BaseClass.logger.Error("Database Query Register User: ", ex);
-                return 0;
+                return null;
             }
         }
         public static DatabaseService.Models.Client GetClient(int ClientId)

@@ -14,12 +14,14 @@ using mqlib;
 
 namespace mqapi.Controllers
 {
+   
     public class AccountController : BaseController
     {
         //
         // GET: /Account/
 
         [HttpPost]
+ 
         public async Task<IHttpActionResult> Register([FromBody] RegisterRequest parameters)
         {
             if (parameters.Password != parameters.PasswordConfirmation)

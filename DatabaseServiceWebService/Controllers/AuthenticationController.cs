@@ -6,8 +6,8 @@ namespace DatabaseServiceWebService.Controllers
   public class AuthenticationController : BaseController {
     [HttpPost]
     public dynamic Authenticate([FromBody] dynamic inputs) {
-        
-        string username = inputs.Username;
+
+        string username = inputs.mobilenumber;
         logger.Debug("Checking authentication for user : " + username);
         return AccountDaoBase.AuthenticateUser(username);
     }

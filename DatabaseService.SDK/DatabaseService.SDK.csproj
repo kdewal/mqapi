@@ -47,6 +47,7 @@
     <Compile Include="Client\CommonClient.cs" />
     <Compile Include="Client\AuthenticationClient.cs" />
     <Compile Include="Client\BaseClient.cs" />
+    <Compile Include="Client\GameClient.cs" />
     <Compile Include="Client\UserClient.cs" />
     <Compile Include="Models\Request\Authentication\AuthenticateRequest.cs" />
     <Compile Include="Models\Request\Authentication\DeleteRefreshTokenRequest.cs" />
@@ -56,6 +57,9 @@
     <Compile Include="Models\Request\BaseRequest.cs" />
     <Compile Include="Models\Request\Common\FullEntityRequest.cs" />
     <Compile Include="Models\Request\EmptyRequest.cs" />
+    <Compile Include="Models\Request\Game\JoinGameRequest.cs" />
+    <Compile Include="Models\Request\Game\CitiesListRequest.cs" />
+    <Compile Include="Models\Request\Game\MyGameListRequest.cs" />
     <Compile Include="Models\Request\PaginatedRequest.cs" />
     <Compile Include="Models\Request\User\RegisterRequest.cs" />
     <Compile Include="Models\Response\Authentication\AuthenticateResponse.cs" />
@@ -66,6 +70,11 @@
     <Compile Include="Models\Response\BaseResponse.cs" />
     <Compile Include="Models\Response\Common\EntityTypeResponse.cs" />
     <Compile Include="Models\Response\Common\FullEntityResponse.cs" />
+    <Compile Include="Models\Response\Game\GameResponse.cs" />
+    <Compile Include="Models\Response\Game\JoinGameResponse.cs" />
+    <Compile Include="Models\Response\Game\CitiesResponse.cs" />
+    <Compile Include="Models\Response\Game\StateResponse.cs" />
+    <Compile Include="Models\Response\Game\MyGameListResponse.cs" />
     <Compile Include="Models\Response\PagedResponse.cs" />
     <Compile Include="Models\Response\User\RegisterResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

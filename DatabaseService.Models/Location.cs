@@ -20,7 +20,11 @@ namespace DatabaseService.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<IdNamePair> Cities { get; set; }
+        //public IEnumerable<IdNamePair> Cities { get; set; }
     }
-   
+    public class Cities
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 }

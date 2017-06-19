@@ -1,0 +1,5 @@
+E:\MQAPI\mqapi\mqapi.Tests\bin\Debug\smapi.Tests.dll
+E:\MQAPI\mqapi\mqapi.Tests\bin\Debug\smapi.Tests.pdb
+E:\MQAPI\mqapi\mqapi.Tests\obj\Debug\mqapi.Tests.csprojResolveAssemblyReference.cache
+E:\MQAPI\mqapi\mqapi.Tests\obj\Debug\smapi.Tests.dll
+E:\MQAPI\mqapi\mqapi.Tests\obj\Debug\smapi.Tests.pdb
