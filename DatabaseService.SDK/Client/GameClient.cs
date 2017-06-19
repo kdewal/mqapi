@@ -61,39 +61,6 @@ namespace DatabaseService.SDK.Client
                 }
             });
         }
-        public async Task<StateResponse> State()
-        {
-            var path = "api/Game/State";
-            var request = new EmptyRequest();
-            return await RunClient<EmptyRequest, List<State>, StateResponse>(request, path, (result, response) =>
-            {
-                if (result == null)
-                {
-                    response.IsSuccess = false;
-                    response.ReasonPhrase = "";
-                }
-                else
-                {
-                    response.StateList = result;
-                }
-            });
-        }
-        public async Task<CitiesResponse> cities(CitiesListRequest request)
-        {
-            var path = "api/Game/Cities";
-
-            return await RunClient<CitiesListRequest, List<Cities>, CitiesResponse>(request, path, (result, response) =>
-            {
-                if (result == null)
-                {
-                    response.IsSuccess = false;
-                    response.ReasonPhrase = "";
-                }
-                else
-                {
-                    response.citiesList = result;
-                }
-            });
-        }
+       
     }
 }

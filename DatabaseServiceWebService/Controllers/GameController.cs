@@ -31,19 +31,6 @@ namespace DatabaseServiceWebService.Controllers
             jg = GameDao.JoinGame(Convert.ToInt64(inputs.userId), Convert.ToInt64(inputs.gameId));
             return jg;
         }
-        [HttpPost]
-        public dynamic State()
-        {
-            List<State> ls = new List<State>();
-            ls = GameDao.State();
-            return ls;
-        }
-        [HttpPost]
-        public dynamic Cities([FromBody] dynamic inputs)
-        {
-            List<Cities> c = new List<Cities>();
-            c = GameDao.Cities(Convert.ToInt32(inputs.stateId));
-            return c;
-        }
+       
     }
 }

@@ -31,7 +31,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/19/2017 15:24:08</publishTime>
     </File>
     <File Include="bin/DatabaseService.SDK.dll">
-      <publishTime>06/19/2017 15:24:33</publishTime>
+      <publishTime>06/19/2017 16:20:24</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>06/13/2017 18:04:24</publishTime>
@@ -79,7 +79,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/13/2017 18:05:28</publishTime>
     </File>
     <File Include="bin/smapi.dll">
-      <publishTime>06/19/2017 15:24:35</publishTime>
+      <publishTime>06/19/2017 16:20:26</publishTime>
     </File>
     <File Include="bin/smlib.dll">
       <publishTime>06/19/2017 15:24:32</publishTime>

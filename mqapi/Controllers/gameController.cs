@@ -56,33 +56,5 @@ namespace smapi.Controllers
                 return BadRequest(response.ReasonPhrase);
             }
         }
-        [System.Web.Http.HttpGet]
-        public async Task<IHttpActionResult> GetStateList()
-        {
-            var client = new GameClient();
-            var response = await client.State();
-            if (response.IsSuccess)
-            {
-                return Ok(response.StateList);
-            }
-            else
-            {
-                return BadRequest(response.ReasonPhrase);
-            }
-        }
-        [System.Web.Http.HttpPost]
-        public async Task<IHttpActionResult> GetCitiesList([FromBody] CitiesListRequest request)
-        {
-            var client = new GameClient();
-            var response = await client.cities(request);
-            if (response.IsSuccess)
-            {
-                return Ok(response.citiesList);
-            }
-            else
-            {
-                return BadRequest(response.ReasonPhrase);
-            }
-        }
     }
 }

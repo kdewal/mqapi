@@ -1,3 +1,4 @@
+E:\MQAPI\mqapi\DatabaseService.SDK\obj\Debug\DatabaseService.SDK.csprojResolveAssemblyReference.cache
 E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\DatabaseService.SDK.dll
 E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\DatabaseService.SDK.pdb
 E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\DatabaseService.Models.dll
@@ -14,6 +15,5 @@ E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\System.Net.Http.Formatting.xml
 E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\MongoDB.Bson.xml
 E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\System.Web.Http.xml
 E:\MQAPI\mqapi\DatabaseService.SDK\bin\Debug\BCrypt.Net.xml
-E:\MQAPI\mqapi\DatabaseService.SDK\obj\Debug\DatabaseService.SDK.csprojResolveAssemblyReference.cache
 E:\MQAPI\mqapi\DatabaseService.SDK\obj\Debug\DatabaseService.SDK.dll
 E:\MQAPI\mqapi\DatabaseService.SDK\obj\Debug\DatabaseService.SDK.pdb

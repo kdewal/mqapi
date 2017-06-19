@@ -58,7 +58,7 @@
     <Compile Include="Models\Request\Common\FullEntityRequest.cs" />
     <Compile Include="Models\Request\EmptyRequest.cs" />
     <Compile Include="Models\Request\Game\JoinGameRequest.cs" />
-    <Compile Include="Models\Request\Game\CitiesListRequest.cs" />
+    <Compile Include="Models\Request\Common\CitiesListRequest.cs" />
     <Compile Include="Models\Request\Game\MyGameListRequest.cs" />
     <Compile Include="Models\Request\PaginatedRequest.cs" />
     <Compile Include="Models\Request\User\RegisterRequest.cs" />
@@ -72,8 +72,8 @@
     <Compile Include="Models\Response\Common\FullEntityResponse.cs" />
     <Compile Include="Models\Response\Game\GameResponse.cs" />
     <Compile Include="Models\Response\Game\JoinGameResponse.cs" />
-    <Compile Include="Models\Response\Game\CitiesResponse.cs" />
-    <Compile Include="Models\Response\Game\StateResponse.cs" />
+    <Compile Include="Models\Response\Common\CitiesResponse.cs" />
+    <Compile Include="Models\Response\Common\StateResponse.cs" />
     <Compile Include="Models\Response\Game\MyGameListResponse.cs" />
     <Compile Include="Models\Response\PagedResponse.cs" />
     <Compile Include="Models\Response\User\RegisterResponse.cs" />

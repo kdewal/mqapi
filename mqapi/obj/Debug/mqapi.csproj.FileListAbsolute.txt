@@ -1,3 +1,4 @@
+E:\MQAPI\mqapi\mqapi\obj\Debug\mqapi.csprojResolveAssemblyReference.cache
 E:\MQAPI\mqapi\mqapi\bin\smapi.dll.config
 E:\MQAPI\mqapi\mqapi\bin\smapi.dll
 E:\MQAPI\mqapi\mqapi\bin\smapi.pdb
@@ -73,6 +74,5 @@ E:\MQAPI\mqapi\mqapi\bin\System.Web.WebPages.Razor.xml
 E:\MQAPI\mqapi\mqapi\bin\WebActivator.pdb
 E:\MQAPI\mqapi\mqapi\bin\MongoDB.Bson.xml
 E:\MQAPI\mqapi\mqapi\bin\BCrypt.Net.xml
-E:\MQAPI\mqapi\mqapi\obj\Debug\mqapi.csprojResolveAssemblyReference.cache
 E:\MQAPI\mqapi\mqapi\obj\Debug\smapi.dll
 E:\MQAPI\mqapi\mqapi\obj\Debug\smapi.pdb

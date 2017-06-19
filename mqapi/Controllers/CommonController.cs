@@ -3,11 +3,12 @@ using mqapi.Models.Request;
 using System.Web.Http;
 using DatabaseService.SDK.Client;
 using DatabaseService.SDK.Models.Request.User;
+using DatabaseService.SDK.Models.Request.Common;
 
 
 namespace mqapi.Controllers
 {
-    [Authorize]
+    
     public class CommonController : BaseController {
 
        // [HttpPost]
@@ -25,11 +26,34 @@ namespace mqapi.Controllers
         //        return BadRequest(response.ReasonPhrase);
         //    }
         //}
-        
-        [HttpGet]
-        public string hello()
+
+        [System.Web.Http.HttpGet]
+        public async Task<IHttpActionResult> GetStateList()
         {
-            return "hello";
+            var client = new CommonClient();
+            var response = await client.State();
+            if (response.IsSuccess)
+            {
+                return Ok(response.StateList);
+            }
+            else
+            {
+                return BadRequest(response.ReasonPhrase);
+            }
+        }
+        [System.Web.Http.HttpPost]
+        public async Task<IHttpActionResult> GetCitiesList([FromBody] CitiesListRequest request)
+        {
+            var client = new CommonClient();
+            var response = await client.cities(request);
+            if (response.IsSuccess)
+            {
+                return Ok(response.citiesList);
+            }
+            else
+            {
+                return BadRequest(response.ReasonPhrase);
+            }
         }
     }
 }

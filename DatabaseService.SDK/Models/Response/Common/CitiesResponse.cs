@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using DatabaseService.Models;
 
-namespace DatabaseService.SDK.Models.Response.Game
+namespace DatabaseService.SDK.Models.Response.Common
 {
-    public class StateResponse : BaseResponse
+    public class CitiesResponse : BaseResponse
     {
-        public List<State> StateList { get; set; }
+        public List<Cities> citiesList { get; set; }
     }
 }

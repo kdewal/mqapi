@@ -5,6 +5,7 @@ using DatabaseService.SDK.Models.Response.Common;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using mqlib;
+using DatabaseService.SDK.Models.Request;
 
 namespace DatabaseService.SDK.Client
 {
@@ -22,6 +23,41 @@ namespace DatabaseService.SDK.Client
                 else
                 {
                     response.EntityTypeList = result;
+                }
+            });
+        }
+        public async Task<StateResponse> State()
+        {
+            var path = "api/Common/State";
+            var request = new EmptyRequest();
+            return await RunClient<EmptyRequest, List<State>, StateResponse>(request, path, (result, response) =>
+            {
+                if (result == null)
+                {
+                    response.IsSuccess = false;
+                    response.ReasonPhrase = "";
+                }
+                else
+                {
+                    response.StateList = result;
+                }
+            });
+        }
+       
+        public async Task<CitiesResponse> cities(CitiesListRequest request)
+        {
+            var path = "api/Common/Cities";
+
+            return await RunClient<CitiesListRequest, List<Cities>, CitiesResponse>(request, path, (result, response) =>
+            {
+                if (result == null)
+                {
+                    response.IsSuccess = false;
+                    response.ReasonPhrase = "";
+                }
+                else
+                {
+                    response.citiesList = result;
                 }
             });
         }

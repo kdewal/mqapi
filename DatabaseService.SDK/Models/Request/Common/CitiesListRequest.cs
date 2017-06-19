@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatabaseService.SDK.Models.Request.Game
+namespace DatabaseService.SDK.Models.Request.Common
 {
     public class CitiesListRequest : BaseRequest
     {
