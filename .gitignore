@@ -2,3 +2,15 @@ ConsumerServiceWebService/bin/*
 ConsumerServiceWebService/obj/*
 DatabaseService.Models/bin/*
 DatabaseService.Models/obj/*
+DatabaseService.Queries/bin/*
+DatabaseService.Queries/obj/*
+DatabaseService.SDK/bin/*
+DatabaseService.SDK/obj/*
+DatabaseServiceWebService/bin/*
+DatabaseServiceWebService/obj/*
+mqapi.Tests/obj/*
+mqapi/bin/*
+mqapi/obj/*
+mqlib/bin/*
+mqlib/obj/*
+packages/*
